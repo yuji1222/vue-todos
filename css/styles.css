@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*共通スタイル*/
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-size: 1.6rem;
+  font-family: Verdana, sans-serif;
+  background: #333;
+  color: #ffff;
+}
+
+#app h1 {
+  font-size: 3rem;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: 'Luckiest Guy', cursive;
+  border-bottom: 1px solid #ddd;
+}
+
+#app li {
+  line-height: 1.5;
+}
+
+#app input[type="text"] {
+  padding: 2px;
+}
+
+.command {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #08c;
+}
+
+#app ul {
+  padding: 0;
+  list-style: none;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.info {
+  color: #bbb;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+#app  button {
+  float: right;
+}
+
+.box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width: 700px;
+  height: 600px;
+  padding: 50px 50px;
+  background-image: url("../img/kokubann.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.todo-list {
+  /* border: 1px solid #333; */
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
