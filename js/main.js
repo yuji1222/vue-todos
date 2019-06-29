@@ -1,11 +1,14 @@
 (function() {
   'use strict';
 
+
+
   var vm = new Vue({
     el: '#app',
     data: {
       newItem: '',
-      todos: []
+      todos: [],
+      days: '',
     },
     watch: {
       todos: {
@@ -17,6 +20,11 @@
     },
     mounted: function() {
      this.todos = JSON.parse(localStorage.getItem('todos')) || [];
+     let now = new Date();
+     let year = now.getFullYear();
+     let month = now.getMonth()+1;
+     let day = now.getDate();
+     this.days = year + "/" + month + "/" + day;
    },
     methods: {
       addItem: function() {
@@ -28,12 +36,12 @@
         this.newItem = '';
       },
       deleteItem: function(index) {
-        if (confirm('are you sure?')){
+        if (confirm('このタスクを消しますか?')){
             this.todos.splice(index, 1);
         }
       },
       purge: function() {
-        if (!confirm('delete finished?')) {
+        if (!confirm('完了したタスクを消しますか?')) {
           return;
         }
         this.todos = this.remaining;

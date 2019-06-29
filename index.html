@@ -10,20 +10,22 @@
   <body>
     <div id="app" class="container">
       <div class="box">
-        <h1>MY TODOS</h1>
-          <button @click="purge">まとめて完了</button>
+        <h1>MY TODOS<span class="date">{{ days }}</span></h1>
           <span class="info">({{ remaining.length }}/{{ todos.length }})</span>
+          <div @click="purge" class="btn-circle-flat purge" >CLEAR</div>
           <ul>
-            <li v-for="(todo, index) in todos" class="todo-list">
-              <input type="checkbox" v-model="todo.isDone">
-              <span :class="{done: todo.isDone}">{{ todo.title }}</span>
-              <span @click="deleteItem(index)" class="command">[消]</span>
-            </li>
+            <!-- <transition-group tag="div"> -->
+              <li v-for="(todo, index) in todos" class="todo-list" :class="{done: todo.isDone}">
+                  <input type="checkbox" v-model="todo.isDone">
+                  <span :class="{done: todo.isDone}">{{ todo.title }}</span>
+                  <span @click="deleteItem(index)" class="command">[消]</span>
+              </li>
+            <!-- <transition-group> -->
             <li v-show="!todos.length">予定はありません。</li>
           </ul>
-          <form @submit.prevent="addItem">
+          <form @submit.prevent="addItem" class="form">
             <input type="text" v-model="newItem">
-            <input type="submit" value="追加">
+            <input type="submit" value="ADD" class="btn-circle-flat">
           </form>
       </div>
 
