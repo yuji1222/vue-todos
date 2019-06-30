@@ -1,155 +1,206 @@
 @charset "UTF-8";
 
-/*共通スタイル*/
-html {
-  font-size: 62.5%;
+@media (min-width: 0px) and (max-width: 399px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  body {
+    background-image: url("../img/kokubann.jpg");
+    position: relative;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    font-size: 2rem;
+    height: 500px;
+    margin: 0;
+    }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+  .date {
+    display: block;
+  }
+
+  .purge {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .purge:hover {
+    background: rgba(118, 122, 87, 0.38);
+  }
+
+  .info {
+    margin-bottom: 5px;
+  }
+
+  #app li > span.done {
+    text-decoration: line-through;
+    color: #bbb;
+  }
+  .box {
+    margin: 30px 0 0 5px;
+  }
+  .btn {
+    cursor: pointer;
+  }
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+@media (min-width: 400px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
 
-body {
-  font-size: 1.6rem;
-  font-family: Verdana, sans-serif;
-  background: #333;
-  color: #ffff;
-}
+  body {
+    font-size: 1.6rem;
+    font-family: Verdana, sans-serif;
+    background: #333;
+    color: #ffff;
+  }
 
-#app h1 {
-  font-size: 3rem;
-  font-family: 'Sawarabi Gothic', sans-serif;
-  font-family: 'Luckiest Guy', cursive;
-  border-bottom: 1px solid #ddd;
-}
+  #app h1 {
+    font-size: 3rem;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    border-bottom: 1px solid #ddd;
+  }
 
-.date {
-  float: right;
-}
+  .date {
+    float: right;
+  }
 
-#app li {
-  line-height: 1.5;
-}
+  #app li {
+    line-height: 1.5;
+  }
 
-#app input[type="text"] {
-  font-size: 1.7rem;
-  height: 30px;
-  width: 200px;
-  border-radius: 4px;
-  margin-right: 10px;
-}
+  #app input[type="text"] {
+    font-size: 1.7rem;
+    height: 30px;
+    width: 200px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
 
-#app input[type="submit"] {
+  #app input[type="submit"] {
 
-}
+  }
 
-.command {
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #08c;
-}
+  .command {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #08c;
+  }
 
-#app ul {
-  padding: 0;
-  list-style: none;
-}
+  #app ul {
+    padding: 0;
+    list-style: none;
+  }
 
-#app li > span.done {
-  text-decoration: line-through;
-  color: #bbb;
-  background: rgba(255, 255, 255, 0);
-}
+  #app li > span.done {
+    text-decoration: line-through;
+    color: #bbb;
+    background: rgba(255, 255, 255, 0);
+  }
 
-.done {
-  background: rgba(18, 115, 195, 0.47);
-}
+  .done {
+    background: rgba(18, 115, 195, 0.47);
+  }
 
 
-.info {
-  font-family: 'Sawarabi Gothic', sans-serif;
-  font-family: 'Luckiest Guy', cursive;
-  color: #bbb;
-  font-size: 2.5rem;
-  font-weight: normal;
-  display: block;
-  padding-bottom: 10px;
-  padding-top: 5px;
-  margin-left: 10px;
-}
+  .info {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    color: #bbb;
+    font-size: 2.5rem;
+    font-weight: normal;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-left: 10px;
+  }
 
-#app  button {
-  display: block;
-  border-radius: 50px;
-}
+  #app  button {
+    display: block;
+    border-radius: 50px;
+  }
 
-.box {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  margin: auto;
-  width: 700px;
-  height: 600px;
-  padding: 50px 50px;
-  background-image: url("../img/kokubann.jpg");
-  background-size: cover;
-  border-radius: 10px;
-}
+  .box {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    width: 700px;
+    height: 600px;
+    padding: 50px 50px;
+    background-image: url("../img/kokubann.jpg");
+    background-size: cover;
+    border-radius: 10px;
+  }
 
-.todo-list {
-  /* border: 1px solid #333; */
-  border-radius: 30px;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-family: 'Sawarabi Gothic', sans-serif;
-  font-family: 'Luckiest Guy', cursive;
-  font-family: 'Kosugi Maru', sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  border: 4px solid #fff;
-}
+  .todo-list {
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 4px solid #fff;
+  }
 
-.btn-circle-flat {
-  display: inline-block;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0);
-  border: 4px solid #fff;
-  border-radius: 10%;
-  padding: 4px 15px;
-  color: #FFF;
-  text-align: center;
-  overflow: hidden;
-  transition: .4s;
-  cursor: pointer;
-}
+  .btn-circle-flat {
+    display: inline-block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0);
+    border: 4px solid #fff;
+    border-radius: 10%;
+    padding: 4px 15px;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+  }
 
-.btn-circle-flat:hover {
-  background: rgba(18, 115, 195, 0.47);
-}
+  .btn-circle-flat:hover {
+    background: rgba(18, 115, 195, 0.47);
+  }
 
-.form {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-}
+  .form {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+  }
 
-.purge {
-  position: absolute;
-  top: 128px;
-  left: 150px;
-}
-
-.v-enter-active {
-  transition: all .8s ease;
-}
-
-.v-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-
-.v-enter, .v-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
+  .purge {
+    position: absolute;
+    top: 128px;
+    left: 150px;
+  }
 }

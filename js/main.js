@@ -3,6 +3,7 @@
 
 
 
+
   var vm = new Vue({
     el: '#app',
     data: {
@@ -28,6 +29,13 @@
    },
     methods: {
       addItem: function() {
+        if ( this.newItem.length <= 0) {
+          return
+        }
+        if ( this.todos.length > 4) {
+          alert('予定はいっぱいです。');
+          return
+        }
         var item = {
           title: this.newItem,
           isDone: false

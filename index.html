@@ -2,6 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YUJI</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Sawarabi+Gothic&display=swap" rel="stylesheet">
@@ -9,23 +10,26 @@
   </head>
   <body>
     <div id="app" class="container">
+      
       <div class="box">
         <h1>MY TODOS<span class="date">{{ days }}</span></h1>
           <span class="info">({{ remaining.length }}/{{ todos.length }})</span>
           <div @click="purge" class="btn-circle-flat purge" >CLEAR</div>
-          <ul>
-            <!-- <transition-group tag="div"> -->
-              <li v-for="(todo, index) in todos" class="todo-list" :class="{done: todo.isDone}">
-                  <input type="checkbox" v-model="todo.isDone">
-                  <span :class="{done: todo.isDone}">{{ todo.title }}</span>
-                  <span @click="deleteItem(index)" class="command">[消]</span>
+            <ul>
+
+              <li v-for="(todo,index) in todos"  class="todo-list" :class="{done: todo.isDone}">
+                <input type="checkbox" v-model="todo.isDone">
+                <span :class="{done: todo.isDone}">{{ todo.title }}</span>
+                <span @click="deleteItem(index)" class="command">[x]</span>
               </li>
-            <!-- <transition-group> -->
+
+
+            </ul>
             <li v-show="!todos.length">予定はありません。</li>
-          </ul>
+
           <form @submit.prevent="addItem" class="form">
             <input type="text" v-model="newItem">
-            <input type="submit" value="ADD" class="btn-circle-flat">
+            <input type="submit" value="ADD" class="btn-circle-flat btn">
           </form>
       </div>
 
